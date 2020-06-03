@@ -108,7 +108,7 @@ namespace vistaFinal
 
         private void MantenimientoDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mantenimiento1 frm = new mantenimiento1(lblUsuario.Text);
+            mantenimientoProductos frm = new mantenimientoProductos(lblUsuario.Text);
             frm.MdiParent = this;
             frm.Show();
         }
@@ -124,7 +124,61 @@ namespace vistaFinal
 
         private void ProcesoDe1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            proceso1 frm = new proceso1();
+            procesoCliente frm = new procesoCliente();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MantenimientoDe1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           mantenimientoMarcas frm = new mantenimientoMarcas(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MantenimientoDe2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          mantenimientoLinea  frm = new mantenimientoLinea(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MantenimientoDe3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           mantenimientoBodegas frm = new mantenimientoBodegas(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MantenimientoDeVendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           mantenimientoVendedores frm = new mantenimientoVendedores(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void MantenimientoDeExistenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           mantenimientoExistencias frm = new mantenimientoExistencias(lblUsuario.Text);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void ProcesoDe2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          procesoClienteFac frm = new procesoClienteFac();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void ReporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           ReporteVentas frm = new ReporteVentas();
             frm.MdiParent = this;
             frm.Show();
         }

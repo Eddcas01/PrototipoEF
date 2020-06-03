@@ -12,7 +12,7 @@ namespace datosFinal
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=ERP");
+            OdbcConnection conn = new OdbcConnection("Dsn=E2");
             try
             {
                 conn.Open();

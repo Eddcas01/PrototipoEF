@@ -4,3 +4,9 @@ C:\Users\edgar\source\repos\VistaEfinal\datosFinal\obj\Debug\datosFinal.csprojAs
 C:\Users\edgar\source\repos\VistaEfinal\datosFinal\obj\Debug\datosFinal.csproj.CoreCompileInputs.cache
 C:\Users\edgar\source\repos\VistaEfinal\datosFinal\obj\Debug\datosFinal.dll
 C:\Users\edgar\source\repos\VistaEfinal\datosFinal\obj\Debug\datosFinal.pdb
+C:\Users\edgar\Documents\GitHub\PrototipoEF\VistaEfinal\datosFinal\bin\Debug\datosFinal.dll
+C:\Users\edgar\Documents\GitHub\PrototipoEF\VistaEfinal\datosFinal\bin\Debug\datosFinal.pdb
+C:\Users\edgar\Documents\GitHub\PrototipoEF\VistaEfinal\datosFinal\obj\Debug\datosFinal.csprojAssemblyReference.cache
+C:\Users\edgar\Documents\GitHub\PrototipoEF\VistaEfinal\datosFinal\obj\Debug\datosFinal.csproj.CoreCompileInputs.cache
+C:\Users\edgar\Documents\GitHub\PrototipoEF\VistaEfinal\datosFinal\obj\Debug\datosFinal.dll
+C:\Users\edgar\Documents\GitHub\PrototipoEF\VistaEfinal\datosFinal\obj\Debug\datosFinal.pdb

@@ -34,7 +34,8 @@
     <Reference Include="CapaDatos">
       <HintPath>..\DLLS\Seguridad\CapaDiseno\bin\Debug\CapaDatos.dll</HintPath>
     </Reference>
-    <Reference Include="CapaDeDiseno">
+    <Reference Include="CapaDeDiseno, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Navegador\CapaDeDiseno\bin\Debug\CapaDeDiseno.dll</HintPath>
     </Reference>
     <Reference Include="CapaDiseno">
@@ -44,6 +45,8 @@
       <HintPath>..\DLLS\ComboAuto\CapaVista\bin\Debug\CapaVista.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="modeloFinal, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -52,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,6 +65,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturas.Designer.cs">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoCliente.Designer.cs">
+      <DependentUpon>mantenimientoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoProductos.Designer.cs">
+      <DependentUpon>mantenimientoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoMarcas.Designer.cs">
+      <DependentUpon>mantenimientoMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoLinea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoLinea.Designer.cs">
+      <DependentUpon>mantenimientoLinea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoBodegas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoBodegas.Designer.cs">
+      <DependentUpon>mantenimientoBodegas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientExistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientExistencias.Designer.cs">
+      <DependentUpon>mantenimientExistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimientoVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimientoVendedores.Designer.cs">
+      <DependentUpon>mantenimientoVendedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="mantenimiento1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +130,18 @@
     </Compile>
     <Compile Include="MDI.Designer.cs">
       <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="procesoClienteFac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="procesoClienteFac.Designer.cs">
+      <DependentUpon>procesoClienteFac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="procesoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="procesoCliente.Designer.cs">
+      <DependentUpon>procesoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="proceso1.cs">
       <SubType>Form</SubType>
@@ -85,13 +155,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentas.Designer.cs">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Facturas.resx">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoCliente.resx">
+      <DependentUpon>mantenimientoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoProductos.resx">
+      <DependentUpon>mantenimientoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoMarcas.resx">
+      <DependentUpon>mantenimientoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoLinea.resx">
+      <DependentUpon>mantenimientoLinea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoBodegas.resx">
+      <DependentUpon>mantenimientoBodegas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientExistencias.resx">
+      <DependentUpon>mantenimientExistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimientoVendedores.resx">
+      <DependentUpon>mantenimientoVendedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento1.resx">
       <DependentUpon>mantenimiento1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="procesoClienteFac.resx">
+      <DependentUpon>procesoClienteFac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="procesoCliente.resx">
+      <DependentUpon>procesoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="proceso1.resx">
       <DependentUpon>proceso1.cs</DependentUpon>
@@ -99,6 +211,13 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentas.resx">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>vent.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transportador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
