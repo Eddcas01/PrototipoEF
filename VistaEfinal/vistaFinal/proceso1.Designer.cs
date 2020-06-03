@@ -29,38 +29,47 @@
         private void InitializeComponent()
         {
             this.Dgb_pedidosEspeciales = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechalim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grb_detalle = new System.Windows.Forms.GroupBox();
+            this.cmb_productos = new CapaVista.Combo();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Btn_agregar = new System.Windows.Forms.Button();
-            this.Btn_eliminar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Nud_cantidad = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_cantidad = new System.Windows.Forms.Label();
             this.grb_encabezado = new System.Windows.Forms.GroupBox();
-            this.Dtp_fechalim = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_codcliente = new System.Windows.Forms.Label();
+            this.cmb_vendedores = new CapaVista.Combo();
+            this.label11 = new System.Windows.Forms.Label();
             this.Lbl_date = new System.Windows.Forms.Label();
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_orden = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_noOrden = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.combo1 = new CapaVista.Combo();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nudCosto = new System.Windows.Forms.NumericUpDown();
+            this.nudPrecio = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbltotal = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_agregar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_orden = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_pedidosEspeciales)).BeginInit();
             this.grb_detalle.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -69,6 +78,8 @@
             this.grb_encabezado.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCosto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,10 +89,12 @@
             this.Dgb_pedidosEspeciales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgb_pedidosEspeciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_pedidosEspeciales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
-            this.Cantidad,
-            this.Fecha,
-            this.fechalim});
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             this.Dgb_pedidosEspeciales.Location = new System.Drawing.Point(10, 532);
             this.Dgb_pedidosEspeciales.Name = "Dgb_pedidosEspeciales";
             this.Dgb_pedidosEspeciales.ReadOnly = true;
@@ -91,50 +104,36 @@
             this.Dgb_pedidosEspeciales.Size = new System.Drawing.Size(685, 154);
             this.Dgb_pedidosEspeciales.TabIndex = 20;
             // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.MinimumWidth = 6;
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // fechalim
-            // 
-            this.fechalim.HeaderText = "Fecha Limite";
-            this.fechalim.MinimumWidth = 6;
-            this.fechalim.Name = "fechalim";
-            this.fechalim.ReadOnly = true;
-            // 
             // grb_detalle
             // 
             this.grb_detalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grb_detalle.Controls.Add(this.combo1);
+            this.grb_detalle.Controls.Add(this.label13);
+            this.grb_detalle.Controls.Add(this.lbltotal);
+            this.grb_detalle.Controls.Add(this.label10);
+            this.grb_detalle.Controls.Add(this.label6);
+            this.grb_detalle.Controls.Add(this.nudPrecio);
+            this.grb_detalle.Controls.Add(this.nudCosto);
+            this.grb_detalle.Controls.Add(this.cmb_productos);
             this.grb_detalle.Controls.Add(this.tableLayoutPanel4);
             this.grb_detalle.Controls.Add(this.tableLayoutPanel2);
             this.grb_detalle.Controls.Add(this.Nud_cantidad);
             this.grb_detalle.Controls.Add(this.label3);
             this.grb_detalle.Controls.Add(this.lbl_cantidad);
             this.grb_detalle.ForeColor = System.Drawing.Color.Black;
-            this.grb_detalle.Location = new System.Drawing.Point(10, 383);
+            this.grb_detalle.Location = new System.Drawing.Point(10, 355);
             this.grb_detalle.Name = "grb_detalle";
-            this.grb_detalle.Size = new System.Drawing.Size(685, 143);
+            this.grb_detalle.Size = new System.Drawing.Size(685, 171);
             this.grb_detalle.TabIndex = 18;
             this.grb_detalle.TabStop = false;
             this.grb_detalle.Text = "Detalle";
+            // 
+            // cmb_productos
+            // 
+            this.cmb_productos.Location = new System.Drawing.Point(134, 37);
+            this.cmb_productos.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.cmb_productos.Name = "cmb_productos";
+            this.cmb_productos.Size = new System.Drawing.Size(184, 32);
+            this.cmb_productos.TabIndex = 22;
             // 
             // tableLayoutPanel4
             // 
@@ -150,21 +149,6 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(96, 100);
             this.tableLayoutPanel4.TabIndex = 21;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
-            this.button1.BackgroundImage = global::vistaFinal.Properties.Resources._157_paper_plane;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(3, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 38);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -173,7 +157,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 56);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Enviar Orden";
+            this.label2.Text = "Hacer Pedido";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
@@ -192,36 +176,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(190, 100);
             this.tableLayoutPanel2.TabIndex = 19;
-            // 
-            // Btn_agregar
-            // 
-            this.Btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
-            this.Btn_agregar.BackgroundImage = global::vistaFinal.Properties.Resources._144_add_file;
-            this.Btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_agregar.FlatAppearance.BorderSize = 0;
-            this.Btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
-            this.Btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_agregar.ForeColor = System.Drawing.Color.Black;
-            this.Btn_agregar.Location = new System.Drawing.Point(3, 53);
-            this.Btn_agregar.Name = "Btn_agregar";
-            this.Btn_agregar.Size = new System.Drawing.Size(87, 40);
-            this.Btn_agregar.TabIndex = 11;
-            this.Btn_agregar.UseVisualStyleBackColor = false;
-            // 
-            // Btn_eliminar
-            // 
-            this.Btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
-            this.Btn_eliminar.BackgroundImage = global::vistaFinal.Properties.Resources._243_exit;
-            this.Btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
-            this.Btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
-            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_eliminar.ForeColor = System.Drawing.Color.Black;
-            this.Btn_eliminar.Location = new System.Drawing.Point(96, 53);
-            this.Btn_eliminar.Name = "Btn_eliminar";
-            this.Btn_eliminar.Size = new System.Drawing.Size(91, 40);
-            this.Btn_eliminar.TabIndex = 12;
-            this.Btn_eliminar.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -247,7 +201,7 @@
             // 
             // Nud_cantidad
             // 
-            this.Nud_cantidad.Location = new System.Drawing.Point(235, 95);
+            this.Nud_cantidad.Location = new System.Drawing.Point(218, 67);
             this.Nud_cantidad.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -270,7 +224,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 55);
+            this.label3.Location = new System.Drawing.Point(19, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 23);
             this.label3.TabIndex = 1;
@@ -279,7 +233,7 @@
             // lbl_cantidad
             // 
             this.lbl_cantidad.AutoSize = true;
-            this.lbl_cantidad.Location = new System.Drawing.Point(19, 97);
+            this.lbl_cantidad.Location = new System.Drawing.Point(22, 74);
             this.lbl_cantidad.Name = "lbl_cantidad";
             this.lbl_cantidad.Size = new System.Drawing.Size(99, 23);
             this.lbl_cantidad.TabIndex = 0;
@@ -288,8 +242,9 @@
             // grb_encabezado
             // 
             this.grb_encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grb_encabezado.Controls.Add(this.Dtp_fechalim);
-            this.grb_encabezado.Controls.Add(this.label6);
+            this.grb_encabezado.Controls.Add(this.lbl_codcliente);
+            this.grb_encabezado.Controls.Add(this.cmb_vendedores);
+            this.grb_encabezado.Controls.Add(this.label11);
             this.grb_encabezado.Controls.Add(this.Lbl_date);
             this.grb_encabezado.Controls.Add(this.lbl_cliente);
             this.grb_encabezado.Controls.Add(this.label4);
@@ -298,35 +253,44 @@
             this.grb_encabezado.Controls.Add(this.label1);
             this.grb_encabezado.Controls.Add(this.lbl_fecha);
             this.grb_encabezado.ForeColor = System.Drawing.Color.Black;
-            this.grb_encabezado.Location = new System.Drawing.Point(10, 186);
+            this.grb_encabezado.Location = new System.Drawing.Point(10, 156);
             this.grb_encabezado.Name = "grb_encabezado";
-            this.grb_encabezado.Size = new System.Drawing.Size(685, 166);
+            this.grb_encabezado.Size = new System.Drawing.Size(685, 193);
             this.grb_encabezado.TabIndex = 17;
             this.grb_encabezado.TabStop = false;
             this.grb_encabezado.Text = "Encabezado";
             // 
-            // Dtp_fechalim
+            // lbl_codcliente
             // 
-            this.Dtp_fechalim.Location = new System.Drawing.Point(194, 133);
-            this.Dtp_fechalim.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
-            this.Dtp_fechalim.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.Dtp_fechalim.Name = "Dtp_fechalim";
-            this.Dtp_fechalim.Size = new System.Drawing.Size(204, 30);
-            this.Dtp_fechalim.TabIndex = 20;
+            this.lbl_codcliente.AutoSize = true;
+            this.lbl_codcliente.Location = new System.Drawing.Point(188, 67);
+            this.lbl_codcliente.Name = "lbl_codcliente";
+            this.lbl_codcliente.Size = new System.Drawing.Size(76, 23);
+            this.lbl_codcliente.TabIndex = 24;
+            this.lbl_codcliente.Text = "Cliente";
             // 
-            // label6
+            // cmb_vendedores
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 140);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 23);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Fecha Limite";
+            this.cmb_vendedores.Location = new System.Drawing.Point(192, 103);
+            this.cmb_vendedores.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.cmb_vendedores.Name = "cmb_vendedores";
+            this.cmb_vendedores.Size = new System.Drawing.Size(141, 37);
+            this.cmb_vendedores.TabIndex = 22;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(19, 110);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 23);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Vendedor";
             // 
             // Lbl_date
             // 
             this.Lbl_date.AutoSize = true;
-            this.Lbl_date.Location = new System.Drawing.Point(192, 101);
+            this.Lbl_date.Location = new System.Drawing.Point(190, 148);
             this.Lbl_date.Name = "Lbl_date";
             this.Lbl_date.Size = new System.Drawing.Size(63, 23);
             this.Lbl_date.TabIndex = 18;
@@ -335,7 +299,7 @@
             // lbl_cliente
             // 
             this.lbl_cliente.AutoSize = true;
-            this.lbl_cliente.Location = new System.Drawing.Point(190, 67);
+            this.lbl_cliente.Location = new System.Drawing.Point(257, 67);
             this.lbl_cliente.Name = "lbl_cliente";
             this.lbl_cliente.Size = new System.Drawing.Size(76, 23);
             this.lbl_cliente.TabIndex = 17;
@@ -345,7 +309,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(17, 67);
+            this.label4.Location = new System.Drawing.Point(19, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 23);
             this.label4.TabIndex = 16;
@@ -357,28 +321,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.btn_orden, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(506, 34);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(575, 44);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(96, 100);
             this.tableLayoutPanel3.TabIndex = 15;
-            // 
-            // btn_orden
-            // 
-            this.btn_orden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
-            this.btn_orden.BackgroundImage = global::vistaFinal.Properties.Resources._227_outbox;
-            this.btn_orden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_orden.FlatAppearance.BorderSize = 0;
-            this.btn_orden.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
-            this.btn_orden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_orden.ForeColor = System.Drawing.Color.Black;
-            this.btn_orden.Location = new System.Drawing.Point(3, 59);
-            this.btn_orden.Name = "btn_orden";
-            this.btn_orden.Size = new System.Drawing.Size(90, 38);
-            this.btn_orden.TabIndex = 10;
-            this.btn_orden.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -388,7 +337,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 56);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Generar Orden";
+            this.label7.Text = "Generar Pedido";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_noOrden
@@ -406,14 +355,14 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(17, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 23);
+            this.label1.Size = new System.Drawing.Size(114, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "No. Orden";
+            this.label1.Text = "No. pedido";
             // 
             // lbl_fecha
             // 
             this.lbl_fecha.AutoSize = true;
-            this.lbl_fecha.Location = new System.Drawing.Point(19, 101);
+            this.lbl_fecha.Location = new System.Drawing.Point(17, 148);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(72, 23);
             this.lbl_fecha.TabIndex = 0;
@@ -435,17 +384,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(707, 150);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(588, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 144);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -456,16 +394,197 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(579, 150);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Pedidos Especiales";
+            this.label5.Text = "Pedidos ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // combo1
+            // Column1
             // 
-            this.combo1.Location = new System.Drawing.Point(171, 54);
-            this.combo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.combo1.Name = "combo1";
-            this.combo1.Size = new System.Drawing.Size(164, 24);
-            this.combo1.TabIndex = 22;
+            this.Column1.HeaderText = "No Doc";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Producto";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cantidad";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Costo";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Bodega";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // nudCosto
+            // 
+            this.nudCosto.DecimalPlaces = 2;
+            this.nudCosto.Location = new System.Drawing.Point(218, 103);
+            this.nudCosto.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudCosto.Name = "nudCosto";
+            this.nudCosto.Size = new System.Drawing.Size(100, 30);
+            this.nudCosto.TabIndex = 23;
+            this.nudCosto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // nudPrecio
+            // 
+            this.nudPrecio.DecimalPlaces = 2;
+            this.nudPrecio.Location = new System.Drawing.Point(218, 134);
+            this.nudPrecio.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nudPrecio.Name = "nudPrecio";
+            this.nudPrecio.Size = new System.Drawing.Size(100, 30);
+            this.nudPrecio.TabIndex = 24;
+            this.nudPrecio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 23);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Costo";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 23);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Precio";
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Location = new System.Drawing.Point(458, 145);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(21, 23);
+            this.lbltotal.TabIndex = 25;
+            this.lbltotal.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(389, 145);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 23);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Total";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
+            this.button1.BackgroundImage = global::vistaFinal.Properties.Resources._157_paper_plane;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(3, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 38);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // Btn_agregar
+            // 
+            this.Btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
+            this.Btn_agregar.BackgroundImage = global::vistaFinal.Properties.Resources._144_add_file;
+            this.Btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_agregar.FlatAppearance.BorderSize = 0;
+            this.Btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
+            this.Btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_agregar.ForeColor = System.Drawing.Color.Black;
+            this.Btn_agregar.Location = new System.Drawing.Point(3, 53);
+            this.Btn_agregar.Name = "Btn_agregar";
+            this.Btn_agregar.Size = new System.Drawing.Size(87, 40);
+            this.Btn_agregar.TabIndex = 11;
+            this.Btn_agregar.UseVisualStyleBackColor = false;
+            this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
+            // 
+            // Btn_eliminar
+            // 
+            this.Btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
+            this.Btn_eliminar.BackgroundImage = global::vistaFinal.Properties.Resources._243_exit;
+            this.Btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.Btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
+            this.Btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_eliminar.ForeColor = System.Drawing.Color.Black;
+            this.Btn_eliminar.Location = new System.Drawing.Point(96, 53);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(91, 40);
+            this.Btn_eliminar.TabIndex = 12;
+            this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
+            // 
+            // btn_orden
+            // 
+            this.btn_orden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
+            this.btn_orden.BackgroundImage = global::vistaFinal.Properties.Resources._227_outbox;
+            this.btn_orden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_orden.FlatAppearance.BorderSize = 0;
+            this.btn_orden.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(60)))), ((int)(((byte)(192)))));
+            this.btn_orden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_orden.ForeColor = System.Drawing.Color.Black;
+            this.btn_orden.Location = new System.Drawing.Point(3, 59);
+            this.btn_orden.Name = "btn_orden";
+            this.btn_orden.Size = new System.Drawing.Size(90, 38);
+            this.btn_orden.TabIndex = 10;
+            this.btn_orden.UseVisualStyleBackColor = false;
+            this.btn_orden.Click += new System.EventHandler(this.Btn_orden_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(132)))), ((int)(((byte)(197)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(588, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 144);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // proceso1
             // 
@@ -481,6 +600,7 @@
             this.Name = "proceso1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "proceso1";
+            this.Load += new System.EventHandler(this.Proceso1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_pedidosEspeciales)).EndInit();
             this.grb_detalle.ResumeLayout(false);
             this.grb_detalle.PerformLayout();
@@ -495,6 +615,8 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCosto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -503,10 +625,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView Dgb_pedidosEspeciales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechalim;
         private System.Windows.Forms.GroupBox grb_detalle;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button button1;
@@ -520,8 +638,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_cantidad;
         private System.Windows.Forms.GroupBox grb_encabezado;
-        private System.Windows.Forms.DateTimePicker Dtp_fechalim;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Lbl_date;
         private System.Windows.Forms.Label lbl_cliente;
         private System.Windows.Forms.Label label4;
@@ -534,6 +650,21 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private CapaVista.Combo combo1;
+        private CapaVista.Combo cmb_productos;
+        private CapaVista.Combo cmb_vendedores;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_codcliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown nudPrecio;
+        private System.Windows.Forms.NumericUpDown nudCosto;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbltotal;
     }
 }

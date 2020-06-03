@@ -12,7 +12,20 @@ namespace modeloFinal
    public class modelo
     {
         sentencias sn = new sentencias();
+        public string idmax(string tabla, string dato)
+        {
 
+
+
+            string idmax = sn.obteneridmax(tabla, dato);
+            if (idmax == "")
+            {
+
+                idmax = "1";
+            }
+
+            return idmax;
+        }
         public DataTable consultaLogica2(string sql)  //obtener datos de la consulta y llenar un data table
         {
             OdbcDataAdapter dt = sn.llenaTbl2(sql);

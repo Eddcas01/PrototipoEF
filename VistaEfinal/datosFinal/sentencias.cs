@@ -96,7 +96,21 @@ namespace datosFinal
 
         }
 
+        public string obteneridmax(string tabla, string dato)// metodo  que obtinene el contenio de una tabla
+        {
+            string id = "";
+            string sql = "SELECT MAX(" + dato + "+1) FROM " + tabla + ";";
+            //SELECT * FROM tbl_bodega WHERE estado=1 ORDER BY kbodega DESC
+            OdbcCommand command = new OdbcCommand(sql, con.conexion());
+            OdbcDataReader reader = command.ExecuteReader();
 
+            if (reader.Read())
+            {
+
+                id = reader.GetValue(0).ToString();
+            }
+            return id;
+        }
         public int contarAlias(string tabla)// metodo  que obtinene el contenio de una tabla
         {
             int Campos = 0;
